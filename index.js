@@ -1,10 +1,16 @@
-function positions(firstPlace, secondPlace, lastPlace){
-   return firstPlace
-   
+function positions(firstPlace, secondPlace, lastPlace) {
+   let podio = [firstPlace, secondPlace, lastPlace];
 
-}
+   if (lastPlace === 'Daniel') {
+       podio = [firstPlace, lastPlace, secondPlace];
+   } else if (secondPlace === 'Daniel') {
+       podio = [secondPlace, firstPlace, lastPlace];
+   } else {
+       podio = [firstPlace, secondPlace, lastPlace];
+   };
 
-let posicoesDoPodio         = [firstPlace, secondPlace, lastPlace]
-let nomeDosCompetidores     = [Rafael, Manoel , Daniel]
+   return podio;
+};
 
-console.log(nomeDosCompetidores.length);
+
+console.log(positions('Matheus', 'Tiago', 'Daniel'));
